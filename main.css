@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+}
+
+body  {
+  width: 100%;
+  display: block;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.header  {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.header-logo  {
+  width: 25%;
+}
+.logo  {
+  float: left;
+  margin: 10px;
+  width: 50%;
+}
+
+.header-info {
+  text-align: right;
+  text-transform: uppercase;
+  width: 75%;
+  padding-right: 20px;
+}
+h1  {
+  font-size: 2em;
+}
+
+h2  {
+  font-weight: bold;
+  text-align: center;
+  margin: 25px auto;
+  background-color: #262626;
+  color: #f2f2f2;
+}
+h4  {
+  font-weight: bold;
+}
+
+hr  {
+  display: block;
+  height: 2px;
+  width: 100%;
+  margin: 10px auto;
+}
+
+
+.banner {
+  display: block;
+  margin:0 auto;
+
+}
+
+.my-banner  {
+  width: 100%;
+
+}
+
+/* projects as featured work*/
+.portfolio  {
+  width: 100%;
+}
+
+.projects  {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.proj-image  {
+  border: 2px solid grey;
+  width: 95%;
+}
+.proj-image:hover  {
+  opacity: 0.7;
+}
+
+p  {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+h5  {
+  color: #808080;
+  text-align: center;
+ }
+
+/*social media icons*/
+
+.icons  {
+  background-color: #262626;
+  width: 100%;
+  text-align: center;
+
+}
+
+.fa {
+  padding: 20px;
+  font-size: 38px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px;
+  color: white;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+
+/*media queries */
+
+/* for nexus 5 */
+@media screen and (max-width: 450px)  {
+
+  h2  {
+    background-color:#e94b3c;
+  }
+  .projects  {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+/* for apple ipad */
+@media screen and (min-width: 451px) and (max-width: 780px) {
+  .projects  {
+    display: flex;
+    justify-content: center;
+  }
+  .logo  {
+    width: 60%;
+  }
+  /* animation - image swing */
+    @keyframes swinging{
+    0%{transform: rotate(10deg);}
+    50%{transform: rotate(-5deg)}
+    100%{transform: rotate(10deg);}
+}
+
+.logo{
+   transform-origin: 50% 0;
+   animation: swinging 3.5s ease-in-out forwards infinite;
+  }
+}
+
+/* for laptop & desktop */
+@media screen and (min-width: 781px)  {
+
+  .logo  {
+    width: 75%;
+  }
+  h1  {
+    font-size:  4em;
+  }
+  h3  {
+    font-size: 3em;
+  }
+  .header, main, footer, hr,  {
+    margin-left: auto;
+    margin-right: auto;
+    }
+}
